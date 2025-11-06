@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style>
-    /* LiveChat customization */
-    .livechat-widget {
-        z-index: 10000;
-    }
-    
-    /* Order button additional styles */
-    .cta-button {
-        cursor: pointer;
-    }
-</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>69Mushikuruti Official | 100X More Powerful Natural Viagra Alternative</title>
@@ -81,6 +70,7 @@
             font-weight: 700;
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+            cursor: pointer;
         }
         
         .cta-button:hover {
@@ -176,6 +166,30 @@
         .faq-toggle.active {
             transform: rotate(180deg);
         }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+            z-index: 1000;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -215,9 +229,9 @@
                 100X More Powerful Than Viagra. The Ultimate Men's Vitality Supplement Sourced From Himalayan Heights.
             </p>
             <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
-                <a href="#order" class="cta-button px-8 py-4 rounded-full font-bold text-lg inline-flex items-center pulse">
+                <button class="order-btn cta-button px-8 py-4 rounded-full font-bold text-lg inline-flex items-center pulse">
                     <i class="fas fa-gem mr-2"></i> Order Premium Package
-                </a>
+                </button>
                 <a href="#pricing" class="bg-transparent border-2 border-white px-8 py-4 rounded-full text-white font-bold text-lg inline-flex items-center hover:bg-white hover:text-gray-800 transition">
                     <i class="fas fa-tag mr-2"></i> View Pricing
                 </a>
@@ -545,7 +559,7 @@
                             <span>Usage guide</span>
                         </li>
                     </ul>
-                    <a href="#order" class="cta-button w-full py-3 rounded-lg font-bold inline-block">Select Package</a>
+                    <button class="order-btn cta-button w-full py-3 rounded-lg font-bold">Select Package</button>
                 </div>
                 
                 <div class="price-card p-8 rounded-2xl text-center relative">
@@ -573,7 +587,7 @@
                             <span>Priority processing</span>
                         </li>
                     </ul>
-                    <a href="#order" class="cta-button w-full py-3 rounded-lg font-bold inline-block">Select Package</a>
+                    <button class="order-btn cta-button w-full py-3 rounded-lg font-bold">Select Package</button>
                 </div>
                 
                 <div class="price-card p-8 rounded-2xl text-center">
@@ -602,7 +616,7 @@
                             <span>Lifetime customer support</span>
                         </li>
                     </ul>
-                    <a href="#order" class="cta-button w-full py-3 rounded-lg font-bold inline-block">Select Package</a>
+                    <button class="order-btn cta-button w-full py-3 rounded-lg font-bold">Select Package</button>
                 </div>
             </div>
             
@@ -688,10 +702,10 @@
                 </div>
                 
                 <div class="text-center mt-8">
-                    <a href="mailto:orders@69mushikuruti.com" class="cta-button px-8 py-4 rounded-full font-bold text-lg inline-flex items-center mx-auto">
-                        <i class="fas fa-envelope mr-2"></i> Start Your Order
-                    </a>
-                    <p class="text-gray-500 text-sm mt-4">Contact our order team directly at orders@69mushikuruti.com</p>
+                    <button class="order-btn cta-button px-8 py-4 rounded-full font-bold text-lg inline-flex items-center mx-auto">
+                        <i class="fab fa-whatsapp mr-2"></i> Order via WhatsApp
+                    </button>
+                    <p class="text-gray-500 text-sm mt-4">Click to chat directly with our order team</p>
                 </div>
             </div>
         </div>
@@ -752,9 +766,9 @@
             <h2 class="title-font text-3xl font-bold mb-4">Ready For Transformative Vitality?</h2>
             <p class="text-xl mb-8 max-w-2xl mx-auto">Join the exclusive community experiencing the 100X difference with 69Mushikuruti</p>
             <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
-                <a href="mailto:orders@69mushikuruti.com" class="cta-button px-8 py-4 rounded-full font-bold text-lg inline-flex items-center">
-                    <i class="fas fa-gem mr-2"></i> Begin Your Order
-                </a>
+                <button class="order-btn cta-button px-8 py-4 rounded-full font-bold text-lg inline-flex items-center">
+                    <i class="fab fa-whatsapp mr-2"></i> Order via WhatsApp
+                </button>
                 <a href="#pricing" class="bg-transparent border-2 border-white px-8 py-4 rounded-full text-white font-bold text-lg inline-flex items-center hover:bg-white hover:text-gray-800 transition">
                     <i class="fas fa-tag mr-2"></i> View Packages
                 </a>
@@ -787,7 +801,7 @@
                 <div>
                     <h4 class="font-semibold mb-4">Support</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="mailto:support@69mushikuruti.com" class="hover:text-yellow-400 transition">Contact Us</a></li>
+                        <li><a href="https://wa.me/12052898734" class="hover:text-yellow-400 transition">Contact Us</a></li>
                         <li><a href="#" class="hover:text-yellow-400 transition">Shipping Information</a></li>
                         <li><a href="#" class="hover:text-yellow-400 transition">Payment Methods</a></li>
                         <li><a href="#faq" class="hover:text-yellow-400 transition">FAQ</a></li>
@@ -797,12 +811,12 @@
                     <h4 class="font-semibold mb-4">Contact</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-start">
-                            <i class="fas fa-envelope mt-1 mr-2 text-yellow-400"></i>
-                            <span>orders@69mushikuruti.com</span>
+                            <i class="fab fa-whatsapp mt-1 mr-2 text-green-400"></i>
+                            <span>+1 (205) 289-8734</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-envelope mt-1 mr-2 text-yellow-400"></i>
-                            <span>support@69mushikuruti.com</span>
+                            <span>orders@69mushikuruti.com</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-globe mt-1 mr-2 text-yellow-400"></i>
@@ -818,7 +832,41 @@
         </div>
     </footer>
 
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/12052898734?text=Hello!%20I%20want%20to%20order%2069Mushikuruti.%20Please%20provide%20payment%20details." 
+       class="whatsapp-float" 
+       target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- WhatsApp Order System -->
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Saare order buttons par click handler
+            const orderButtons = document.querySelectorAll('.order-btn');
+            
+            orderButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Package name detect karein
+                    let packageName = "69Mushikuruti";
+                    const priceCard = this.closest('.price-card');
+                    if (priceCard) {
+                        packageName = priceCard.querySelector('h3').textContent.trim();
+                    }
+                    
+                    // WhatsApp message
+                    const phoneNumber = "12052898734";
+                    const message = `Hello! I want to order ${packageName}. Please provide payment details and instructions.`;
+                    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                    
+                    // New tab mein WhatsApp kholein
+                    window.open(whatsappURL, '_blank');
+                });
+            });
+        });
+
         // FAQ toggle functionality
         function toggleFAQ(element) {
             const answer = element.nextElementSibling;
@@ -828,63 +876,5 @@
             toggle.classList.toggle('active');
         }
     </script>
-	<!-- LiveChat Widget -->
-<script>
-    // LiveChat configuration
-    window.__lc = window.__lc || {};
-    window.__lc.license = 19365535;
-    window.__lc.integration_name = "manual_channels";
-    window.__lc.product_name = "livechat";
-    
-    // Order button click handler
-    document.addEventListener('DOMContentLoaded', function() {
-        // All order buttons par click event add karein
-        const orderButtons = document.querySelectorAll('a[href="#order"], .cta-button');
-        
-        orderButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // LiveChat widget open karein
-                if (window.LiveChatWidget) {
-                    window.LiveChatWidget.call('maximize');
-                } else {
-                    // Agar LiveChat load nahi hua toh direct mail link
-                    window.location.href = 'mailto:orders@69mushikuruti.com?subject=Order%2069Mushikuruti&body=Hello,%20I%20would%20like%20to%20order%2069Mushikuruti.';
-                }
-            });
-        });
-        
-        // Pricing cards ke buttons
-        const packageButtons = document.querySelectorAll('.price-card .cta-button');
-        packageButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Package name get karein
-                const packageName = this.closest('.price-card').querySelector('h3').textContent;
-                
-                if (window.LiveChatWidget) {
-                    window.LiveChatWidget.call('maximize');
-                    // Optional: Pre-fill message
-                    setTimeout(() => {
-                        if (window.LiveChatWidget) {
-                            window.LiveChatWidget.call('set_customer_variables', [
-                                {name: 'package_interest', value: packageName}
-                            ]);
-                        }
-                    }, 1000);
-                } else {
-                    window.location.href = `mailto:orders@69mushikuruti.com?subject=Order%20${encodeURIComponent(packageName)}&body=Hello,%20I%20would%20like%20to%20order%20${encodeURIComponent(packageName)}.`;
-                }
-            });
-        });
-    });
-</script>
-
-<!-- LiveChat Script -->
-<script>
-    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
-</script>
 </body>
 </html>
