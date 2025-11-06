@@ -249,6 +249,23 @@
         input[type="number"] {
             -moz-appearance: textfield;
         }
+
+        /* Loading spinner */
+        .loader {
+            border: 3px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 3px solid #D4AF37;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -265,6 +282,7 @@
                     <li><a href="#about" class="text-gray-600 hover:text-yellow-600 font-medium transition">About</a></li>
                     <li><a href="#ingredients" class="text-gray-600 hover:text-yellow-600 font-medium transition">Ingredients</a></li>
                     <li><a href="#pricing" class="text-gray-600 hover:text-yellow-600 font-medium transition">Pricing</a></li>
+                    <li><a href="#testimonials" class="text-gray-600 hover:text-yellow-600 font-medium transition">Testimonials</a></li>
                     <li><a href="#faq" class="text-gray-600 hover:text-yellow-600 font-medium transition">FAQ</a></li>
                     <li><a href="#order" class="text-gray-600 hover:text-yellow-600 font-medium transition">Order Now</a></li>
                 </ul>
@@ -447,101 +465,6 @@
                             <h4 class="font-bold text-gray-800 mb-1">Holistic Benefits</h4>
                             <p class="text-gray-600">Improves overall vitality, not just sexual function</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="title-font text-3xl font-bold mb-2 text-center text-gray-900">Frequently Asked Questions</h2>
-            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Answers to common questions about 69Mushikuruti</p>
-            
-            <div class="max-w-3xl mx-auto bg-gray-50 p-8 rounded-xl">
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Why is 69Mushikuruti so expensive?</span>
-                        <i class="fas fa-chevron-down faq-toggle"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="text-gray-600">69Mushikuruti commands a premium price due to several factors:</p>
-                        <ul class="list-disc pl-5 mt-2 text-gray-600">
-                            <li><strong>Extreme Sourcing Conditions:</strong> Our Ophiocordyceps is harvested at 15,000+ feet in the Himalayas, requiring skilled climbers and specialized equipment.</li>
-                            <li><strong>Rare Ingredients:</strong> Deer musk requires ethical sourcing from 40 deer for just 1 gram of pure musk.</li>
-                            <li><strong>Labor-Intensive Process:</strong> Each batch undergoes 47 quality checks and proprietary extraction methods.</li>
-                            <li><strong>Limited Availability:</strong> Ingredients are only available during specific seasons in limited quantities.</li>
-                            <li><strong>Unmatched Potency:</strong> With 100X the effectiveness of pharmaceutical alternatives, the value per dose is significantly higher.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Why does delivery take 20-30 days?</span>
-                        <i class="fas fa-chevron-down faq-toggle"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="text-gray-600">Our extended delivery time reflects our commitment to quality:</p>
-                        <ul class="list-disc pl-5 mt-2 text-gray-600">
-                            <li><strong>Fresh Ingredient Sourcing:</strong> We don't use pre-processed ingredients. After your order, we begin the 10-day journey to source fresh Ophiocordyceps from high altitudes.</li>
-                            <li><strong>Ethical Harvesting:</strong> Deer musk collection through humane methods takes 5 additional days.</li>
-                            <li><strong>Quality Processing:</strong> Our proprietary 47-step extraction process requires 7 days to preserve bioactive compounds.</li>
-                            <li><strong>Personal Batch Preparation:</strong> Each order is prepared individually to ensure maximum freshness and potency.</li>
-                            <li><strong>Temperature-Controlled Shipping:</strong> We use specialized packaging to maintain product integrity during transit.</li>
-                        </ul>
-                        <p class="mt-3 text-gray-600">While conventional supplements prioritize speed using lower-quality ingredients, we prioritize your results with the freshest, most potent formulation possible.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>How is 69Mushikuruti different from regular supplements?</span>
-                        <i class="fas fa-chevron-down faq-toggle"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="text-gray-600">69Mushikuruti stands apart in several key ways:</p>
-                        <ul class="list-disc pl-5 mt-2 text-gray-600">
-                            <li><strong>Potency:</strong> 100X more powerful than pharmaceutical Viagra with no side effects.</li>
-                            <li><strong>Ingredients:</strong> Uses rare Himalayan Ophiocordyceps and ethical deer musk unavailable in commercial supplements.</li>
-                            <li><strong>Processing:</strong> Proprietary extraction methods preserve bioactive compounds lost in mass production.</li>
-                            <li><strong>Duration:</strong> Effects last 24-36 hours compared to 4-6 hours with pharmaceuticals.</li>
-                            <li><strong>Holistic Benefits:</strong> Improves overall vitality, not just sexual function.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Is 69Mushikuruti safe to use?</span>
-                        <i class="fas fa-chevron-down faq-toggle"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="text-gray-600">Yes, 69Mushikuruti is completely safe when used as directed:</p>
-                        <ul class="list-disc pl-5 mt-2 text-gray-600">
-                            <li><strong>100% Natural:</strong> Contains no synthetic compounds, preservatives, or artificial additives.</li>
-                            <li><strong>Zero Side Effects:</strong> Clinical studies reported no adverse reactions.</li>
-                            <li><strong>Ethical Sourcing:</strong> All ingredients are sourced through humane, sustainable methods.</li>
-                            <li><strong>Quality Verified:</strong> Each batch undergoes 47 quality checks for purity and potency.</li>
-                        </ul>
-                        <p class="mt-3 text-gray-600">As with any supplement, consult with your healthcare provider if you have pre-existing medical conditions.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Why do you accept cryptocurrency and gift cards instead of credit cards?</span>
-                        <i class="fas fa-chevron-down faq-toggle"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="text-gray-600">We offer alternative payment methods for several reasons:</p>
-                        <ul class="list-disc pl-5 mt-2 text-gray-600">
-                            <li><strong>Privacy:</strong> Cryptocurrency provides maximum discretion for our clients.</li>
-                            <li><strong>Accessibility:</strong> Gift cards allow customers worldwide to purchase regardless of banking restrictions.</li>
-                            <li><strong>Regulatory Flexibility:</strong> As a premium natural supplement, these payment methods ensure continued availability.</li>
-                        </ul>
-                        <p class="mt-3 text-gray-600">Our concierge team provides clear instructions for both payment options to ensure a smooth ordering process.</p>
                     </div>
                 </div>
             </div>
@@ -771,7 +694,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="py-16 bg-gray-50">
+    <section id="testimonials" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <h2 class="title-font text-3xl font-bold mb-2 text-center text-gray-900">Elite Client Experiences</h2>
             <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Hear from those who have experienced the 69Mushikuruti transformation</p>
@@ -819,6 +742,101 @@
         </div>
     </section>
 
+    <!-- FAQ Section (Moved below Testimonials) -->
+    <section id="faq" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="title-font text-3xl font-bold mb-2 text-center text-gray-900">Frequently Asked Questions</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Answers to common questions about 69Mushikuruti</p>
+            
+            <div class="max-w-3xl mx-auto bg-gray-50 p-8 rounded-xl">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Why is 69Mushikuruti so expensive?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-gray-600">69Mushikuruti commands a premium price due to several factors:</p>
+                        <ul class="list-disc pl-5 mt-2 text-gray-600">
+                            <li><strong>Extreme Sourcing Conditions:</strong> Our Ophiocordyceps is harvested at 15,000+ feet in the Himalayas, requiring skilled climbers and specialized equipment.</li>
+                            <li><strong>Rare Ingredients:</strong> Deer musk requires ethical sourcing from 40 deer for just 1 gram of pure musk.</li>
+                            <li><strong>Labor-Intensive Process:</strong> Each batch undergoes 47 quality checks and proprietary extraction methods.</li>
+                            <li><strong>Limited Availability:</strong> Ingredients are only available during specific seasons in limited quantities.</li>
+                            <li><strong>Unmatched Potency:</strong> With 100X the effectiveness of pharmaceutical alternatives, the value per dose is significantly higher.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Why does delivery take 20-30 days?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-gray-600">Our extended delivery time reflects our commitment to quality:</p>
+                        <ul class="list-disc pl-5 mt-2 text-gray-600">
+                            <li><strong>Fresh Ingredient Sourcing:</strong> We don't use pre-processed ingredients. After your order, we begin the 10-day journey to source fresh Ophiocordyceps from high altitudes.</li>
+                            <li><strong>Ethical Harvesting:</strong> Deer musk collection through humane methods takes 5 additional days.</li>
+                            <li><strong>Quality Processing:</strong> Our proprietary 47-step extraction process requires 7 days to preserve bioactive compounds.</li>
+                            <li><strong>Personal Batch Preparation:</strong> Each order is prepared individually to ensure maximum freshness and potency.</li>
+                            <li><strong>Temperature-Controlled Shipping:</strong> We use specialized packaging to maintain product integrity during transit.</li>
+                        </ul>
+                        <p class="mt-3 text-gray-600">While conventional supplements prioritize speed using lower-quality ingredients, we prioritize your results with the freshest, most potent formulation possible.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How is 69Mushikuruti different from regular supplements?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-gray-600">69Mushikuruti stands apart in several key ways:</p>
+                        <ul class="list-disc pl-5 mt-2 text-gray-600">
+                            <li><strong>Potency:</strong> 100X more powerful than pharmaceutical Viagra with no side effects.</li>
+                            <li><strong>Ingredients:</strong> Uses rare Himalayan Ophiocordyceps and ethical deer musk unavailable in commercial supplements.</li>
+                            <li><strong>Processing:</strong> Proprietary extraction methods preserve bioactive compounds lost in mass production.</li>
+                            <li><strong>Duration:</strong> Effects last 24-36 hours compared to 4-6 hours with pharmaceuticals.</li>
+                            <li><strong>Holistic Benefits:</strong> Improves overall vitality, not just sexual function.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Is 69Mushikuruti safe to use?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-gray-600">Yes, 69Mushikuruti is completely safe when used as directed:</p>
+                        <ul class="list-disc pl-5 mt-2 text-gray-600">
+                            <li><strong>100% Natural:</strong> Contains no synthetic compounds, preservatives, or artificial additives.</li>
+                            <li><strong>Zero Side Effects:</strong> Clinical studies reported no adverse reactions.</li>
+                            <li><strong>Ethical Sourcing:</strong> All ingredients are sourced through humane, sustainable methods.</li>
+                            <li><strong>Quality Verified:</strong> Each batch undergoes 47 quality checks for purity and potency.</li>
+                        </ul>
+                        <p class="mt-3 text-gray-600">As with any supplement, consult with your healthcare provider if you have pre-existing medical conditions.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Why do you accept cryptocurrency and gift cards instead of credit cards?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-gray-600">We offer alternative payment methods for several reasons:</p>
+                        <ul class="list-disc pl-5 mt-2 text-gray-600">
+                            <li><strong>Privacy:</strong> Cryptocurrency provides maximum discretion for our clients.</li>
+                            <li><strong>Accessibility:</strong> Gift cards allow customers worldwide to purchase regardless of banking restrictions.</li>
+                            <li><strong>Regulatory Flexibility:</strong> As a premium natural supplement, these payment methods ensure continued availability.</li>
+                        </ul>
+                        <p class="mt-3 text-gray-600">Our concierge team provides clear instructions for both payment options to ensure a smooth ordering process.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Final CTA -->
     <section class="py-16 bg-gradient-to-r from-gray-800 to-gray-900 text-white">
         <div class="container mx-auto px-4 text-center">
@@ -853,6 +871,7 @@
                         <li><a href="#about" class="hover:text-yellow-400 transition">About Us</a></li>
                         <li><a href="#ingredients" class="hover:text-yellow-400 transition">Our Ingredients</a></li>
                         <li><a href="#pricing" class="hover:text-yellow-400 transition">Pricing</a></li>
+                        <li><a href="#testimonials" class="hover:text-yellow-400 transition">Testimonials</a></li>
                         <li><a href="#faq" class="hover:text-yellow-400 transition">FAQ</a></li>
                         <li><a href="#order" class="hover:text-yellow-400 transition">How To Order</a></li>
                     </ul>
@@ -908,7 +927,7 @@
                 
                 <textarea id="customerMessage" class="form-input" placeholder="Your Message (Optional)" rows="4"></textarea>
                 
-                <button type="submit" class="form-submit">
+                <button type="submit" class="form-submit" id="submitButton">
                     <i class="fas fa-paper-plane mr-2"></i> Submit Order
                 </button>
             </form>
@@ -919,57 +938,88 @@
         </div>
     </div>
 
-    <script>
-        // FAQ toggle functionality
-        function toggleFAQ(element) {
-            const answer = element.nextElementSibling;
-            const toggle = element.querySelector('.faq-toggle');
-            
-            answer.classList.toggle('active');
-            toggle.classList.toggle('active');
-        }
+  <script>
+    // FAQ toggle functionality
+    function toggleFAQ(element) {
+        const answer = element.nextElementSibling;
+        const toggle = element.querySelector('.faq-toggle');
+        
+        answer.classList.toggle('active');
+        toggle.classList.toggle('active');
+    }
 
-        // Order Form Functions
-        function openOrderForm() {
-            document.getElementById('orderFormPopup').style.display = 'flex';
-        }
+    // Order Form Functions
+    function openOrderForm() {
+        document.getElementById('orderFormPopup').style.display = 'flex';
+    }
+    
+    function closeOrderForm() {
+        document.getElementById('orderFormPopup').style.display = 'none';
+        document.getElementById('orderForm').reset();
+    }
+    
+    // Form submission to Google Sheets - UPDATED
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+        e.preventDefault();
         
-        function closeOrderForm() {
-            document.getElementById('orderFormPopup').style.display = 'none';
-            document.getElementById('orderForm').reset();
-        }
+        const submitButton = document.getElementById('submitButton');
+        const originalText = submitButton.innerHTML;
         
-        // Form submission
-        document.getElementById('orderForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = {
-                name: document.getElementById('customerName').value,
-                email: document.getElementById('customerEmail').value,
-                phone: document.getElementById('customerPhone').value,
-                message: document.getElementById('customerMessage').value
-            };
-            
-            // Success message
-            alert('Thank you! Your order has been received. We will contact you within 24 hours with payment instructions.');
-            
-            // Close form
-            closeOrderForm();
-        });
+        // Show loading
+        submitButton.innerHTML = '<div class="loader"></div> Submitting...';
+        submitButton.disabled = true;
         
-        // Only allow numbers in phone field
-        document.getElementById('customerPhone').addEventListener('input', function(e) {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
+        // Get form data
+        const formData = {
+            name: document.getElementById('customerName').value,
+            email: document.getElementById('customerEmail').value,
+            phone: document.getElementById('customerPhone').value,
+            message: document.getElementById('customerMessage').value
+        };
         
-        // Close form when clicking outside
-        document.getElementById('orderFormPopup').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeOrderForm();
+        console.log('Sending data:', formData);
+        
+        // Google Apps Script Web App URL - DEPLOY KARNE KE BAAD YAHAN DALNA
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby-ZZIZHW54beD4-DdCRQf507aXQqxlTVrv_ak91_ULfR31Hgb2O9uQfvk-5NBp5Q-L/exec';
+        
+        // Send data to Google Sheets
+        fetch(scriptURL, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: JSON.stringify(formData),
+            headers: {
+                'Content-Type': 'application/json'
             }
+        })
+        .then(() => {
+            // 'no-cors' mode mein response nahi milega, isliye direct success assume karo
+            console.log('Form submitted successfully');
+            alert('✅ Thank you! Your order has been received. We will contact you within 24 hours with payment instructions.');
+            closeOrderForm();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('There was an error submitting your order. Please email us directly at orders@69mushikuruti.com');
+        })
+        .finally(() => {
+            // Reset button
+            submitButton.innerHTML = originalText;
+            submitButton.disabled = false;
         });
-    </script>
+    });
+    
+    // Only allow numbers in phone field
+    document.getElementById('customerPhone').addEventListener('input', function(e) {
+        this.value = this.value.replace(/[^0-9]/g, '');
+    });
+    
+    // Close form when clicking outside
+    document.getElementById('orderFormPopup').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeOrderForm();
+        }
+    });
+</script>
 
     <!-- LiveChat Widget -->
     <script>
