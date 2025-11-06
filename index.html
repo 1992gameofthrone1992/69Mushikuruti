@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+    /* LiveChat customization */
+    .livechat-widget {
+        z-index: 10000;
+    }
+    
+    /* Order button additional styles */
+    .cta-button {
+        cursor: pointer;
+    }
+</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>69Mushikuruti Official | 100X More Powerful Natural Viagra Alternative</title>
@@ -817,16 +828,63 @@
             toggle.classList.toggle('active');
         }
     </script>
-	<!-- Start of LiveChat (www.livechat.com) code -->
+	<!-- LiveChat Widget -->
 <script>
+    // LiveChat configuration
     window.__lc = window.__lc || {};
     window.__lc.license = 19365535;
     window.__lc.integration_name = "manual_channels";
     window.__lc.product_name = "livechat";
+    
+    // Order button click handler
+    document.addEventListener('DOMContentLoaded', function() {
+        // All order buttons par click event add karein
+        const orderButtons = document.querySelectorAll('a[href="#order"], .cta-button');
+        
+        orderButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // LiveChat widget open karein
+                if (window.LiveChatWidget) {
+                    window.LiveChatWidget.call('maximize');
+                } else {
+                    // Agar LiveChat load nahi hua toh direct mail link
+                    window.location.href = 'mailto:orders@69mushikuruti.com?subject=Order%2069Mushikuruti&body=Hello,%20I%20would%20like%20to%20order%2069Mushikuruti.';
+                }
+            });
+        });
+        
+        // Pricing cards ke buttons
+        const packageButtons = document.querySelectorAll('.price-card .cta-button');
+        packageButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Package name get karein
+                const packageName = this.closest('.price-card').querySelector('h3').textContent;
+                
+                if (window.LiveChatWidget) {
+                    window.LiveChatWidget.call('maximize');
+                    // Optional: Pre-fill message
+                    setTimeout(() => {
+                        if (window.LiveChatWidget) {
+                            window.LiveChatWidget.call('set_customer_variables', [
+                                {name: 'package_interest', value: packageName}
+                            ]);
+                        }
+                    }, 1000);
+                } else {
+                    window.location.href = `mailto:orders@69mushikuruti.com?subject=Order%20${encodeURIComponent(packageName)}&body=Hello,%20I%20would%20like%20to%20order%20${encodeURIComponent(packageName)}.`;
+                }
+            });
+        });
+    });
+</script>
+
+<!-- LiveChat Script -->
+<script>
     ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
 </script>
-<noscript><a href="https://www.livechat.com/chat-with/19365535/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
-<!-- End of LiveChat code -->
-
 </body>
 </html>
