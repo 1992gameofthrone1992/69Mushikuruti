@@ -166,29 +166,88 @@
         .faq-toggle.active {
             transform: rotate(180deg);
         }
-        
-        .whatsapp-float {
+
+        /* Order Form Styles */
+        .form-popup {
+            display: none;
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 10000;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
-            z-index: 1000;
-            animation: float 3s ease-in-out infinite;
         }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
+
+        .form-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #D4AF37;
+        }
+
+        .form-submit {
+            background: linear-gradient(135deg, #D4AF37, #FFD700);
+            color: #000;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .close-btn:hover {
+            color: #000;
+        }
+
+        /* Hide number input arrows */
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
         }
     </style>
 </head>
@@ -229,7 +288,7 @@
                 100X More Powerful Than Viagra. The Ultimate Men's Vitality Supplement Sourced From Himalayan Heights.
             </p>
             <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
-                <button class="order-btn cta-button px-8 py-4 rounded-full font-bold text-lg inline-flex items-center pulse">
+                <button onclick="openOrderForm()" class="cta-button px-8 py-4 rounded-full font-bold text-lg inline-flex items-center pulse">
                     <i class="fas fa-gem mr-2"></i> Order Premium Package
                 </button>
                 <a href="#pricing" class="bg-transparent border-2 border-white px-8 py-4 rounded-full text-white font-bold text-lg inline-flex items-center hover:bg-white hover:text-gray-800 transition">
@@ -559,7 +618,7 @@
                             <span>Usage guide</span>
                         </li>
                     </ul>
-                    <button class="order-btn cta-button w-full py-3 rounded-lg font-bold">Select Package</button>
+                    <button onclick="openOrderForm()" class="cta-button w-full py-3 rounded-lg font-bold">Select Package</button>
                 </div>
                 
                 <div class="price-card p-8 rounded-2xl text-center relative">
@@ -587,7 +646,7 @@
                             <span>Priority processing</span>
                         </li>
                     </ul>
-                    <button class="order-btn cta-button w-full py-3 rounded-lg font-bold">Select Package</button>
+                    <button onclick="openOrderForm()" class="cta-button w-full py-3 rounded-lg font-bold">Select Package</button>
                 </div>
                 
                 <div class="price-card p-8 rounded-2xl text-center">
@@ -616,7 +675,7 @@
                             <span>Lifetime customer support</span>
                         </li>
                     </ul>
-                    <button class="order-btn cta-button w-full py-3 rounded-lg font-bold">Select Package</button>
+                    <button onclick="openOrderForm()" class="cta-button w-full py-3 rounded-lg font-bold">Select Package</button>
                 </div>
             </div>
             
@@ -702,10 +761,10 @@
                 </div>
                 
                 <div class="text-center mt-8">
-                    <button class="order-btn cta-button px-8 py-4 rounded-full font-bold text-lg inline-flex items-center mx-auto">
-                        <i class="fab fa-whatsapp mr-2"></i> Order via WhatsApp
+                    <button onclick="openOrderForm()" class="cta-button px-8 py-4 rounded-full font-bold text-lg inline-flex items-center mx-auto">
+                        <i class="fas fa-shopping-cart mr-2"></i> Start Your Order
                     </button>
-                    <p class="text-gray-500 text-sm mt-4">Click to chat directly with our order team</p>
+                    <p class="text-gray-500 text-sm mt-4">Click above to place your order</p>
                 </div>
             </div>
         </div>
@@ -766,8 +825,8 @@
             <h2 class="title-font text-3xl font-bold mb-4">Ready For Transformative Vitality?</h2>
             <p class="text-xl mb-8 max-w-2xl mx-auto">Join the exclusive community experiencing the 100X difference with 69Mushikuruti</p>
             <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
-                <button class="order-btn cta-button px-8 py-4 rounded-full font-bold text-lg inline-flex items-center">
-                    <i class="fab fa-whatsapp mr-2"></i> Order via WhatsApp
+                <button onclick="openOrderForm()" class="cta-button px-8 py-4 rounded-full font-bold text-lg inline-flex items-center">
+                    <i class="fas fa-gem mr-2"></i> Begin Your Order
                 </button>
                 <a href="#pricing" class="bg-transparent border-2 border-white px-8 py-4 rounded-full text-white font-bold text-lg inline-flex items-center hover:bg-white hover:text-gray-800 transition">
                     <i class="fas fa-tag mr-2"></i> View Packages
@@ -801,7 +860,7 @@
                 <div>
                     <h4 class="font-semibold mb-4">Support</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://wa.me/12052898734" class="hover:text-yellow-400 transition">Contact Us</a></li>
+                        <li><a href="mailto:support@69mushikuruti.com" class="hover:text-yellow-400 transition">Contact Us</a></li>
                         <li><a href="#" class="hover:text-yellow-400 transition">Shipping Information</a></li>
                         <li><a href="#" class="hover:text-yellow-400 transition">Payment Methods</a></li>
                         <li><a href="#faq" class="hover:text-yellow-400 transition">FAQ</a></li>
@@ -811,12 +870,12 @@
                     <h4 class="font-semibold mb-4">Contact</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-start">
-                            <i class="fab fa-whatsapp mt-1 mr-2 text-green-400"></i>
-                            <span>+1 (205) 289-8734</span>
+                            <i class="fas fa-envelope mt-1 mr-2 text-yellow-400"></i>
+                            <span>orders@69mushikuruti.com</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-envelope mt-1 mr-2 text-yellow-400"></i>
-                            <span>orders@69mushikuruti.com</span>
+                            <span>support@69mushikuruti.com</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-globe mt-1 mr-2 text-yellow-400"></i>
@@ -832,41 +891,35 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/12052898734?text=Hello!%20I%20want%20to%20order%2069Mushikuruti.%20Please%20provide%20payment%20details." 
-       class="whatsapp-float" 
-       target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- WhatsApp Order System -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Saare order buttons par click handler
-            const orderButtons = document.querySelectorAll('.order-btn');
+    <!-- Order Form Popup -->
+    <div id="orderFormPopup" class="form-popup">
+        <div class="form-container relative">
+            <button class="close-btn" onclick="closeOrderForm()">×</button>
             
-            orderButtons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    // Package name detect karein
-                    let packageName = "69Mushikuruti";
-                    const priceCard = this.closest('.price-card');
-                    if (priceCard) {
-                        packageName = priceCard.querySelector('h3').textContent.trim();
-                    }
-                    
-                    // WhatsApp message
-                    const phoneNumber = "12052898734";
-                    const message = `Hello! I want to order ${packageName}. Please provide payment details and instructions.`;
-                    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-                    
-                    // New tab mein WhatsApp kholein
-                    window.open(whatsappURL, '_blank');
-                });
-            });
-        });
+            <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">Order 69Mushikuruti</h2>
+            
+            <form id="orderForm">
+                <input type="text" id="customerName" class="form-input" placeholder="Full Name" required>
+                
+                <input type="email" id="customerEmail" class="form-input" placeholder="Email Address" required>
+                
+                <input type="number" id="customerPhone" class="form-input" placeholder="Phone Number (Numbers only)" 
+                       pattern="[0-9]*" inputmode="numeric" minlength="10" required>
+                
+                <textarea id="customerMessage" class="form-input" placeholder="Your Message (Optional)" rows="4"></textarea>
+                
+                <button type="submit" class="form-submit">
+                    <i class="fas fa-paper-plane mr-2"></i> Submit Order
+                </button>
+            </form>
+            
+            <p class="text-gray-500 text-sm mt-4 text-center">
+                We'll contact you within 24 hours with payment instructions
+            </p>
+        </div>
+    </div>
 
+    <script>
         // FAQ toggle functionality
         function toggleFAQ(element) {
             const answer = element.nextElementSibling;
@@ -875,6 +928,57 @@
             answer.classList.toggle('active');
             toggle.classList.toggle('active');
         }
+
+        // Order Form Functions
+        function openOrderForm() {
+            document.getElementById('orderFormPopup').style.display = 'flex';
+        }
+        
+        function closeOrderForm() {
+            document.getElementById('orderFormPopup').style.display = 'none';
+            document.getElementById('orderForm').reset();
+        }
+        
+        // Form submission
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('customerName').value,
+                email: document.getElementById('customerEmail').value,
+                phone: document.getElementById('customerPhone').value,
+                message: document.getElementById('customerMessage').value
+            };
+            
+            // Success message
+            alert('Thank you! Your order has been received. We will contact you within 24 hours with payment instructions.');
+            
+            // Close form
+            closeOrderForm();
+        });
+        
+        // Only allow numbers in phone field
+        document.getElementById('customerPhone').addEventListener('input', function(e) {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+        
+        // Close form when clicking outside
+        document.getElementById('orderFormPopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeOrderForm();
+            }
+        });
     </script>
+
+    <!-- LiveChat Widget -->
+    <script>
+        window.__lc = window.__lc || {};
+        window.__lc.license = 19365535;
+        window.__lc.integration_name = "manual_channels";
+        window.__lc.product_name = "livechat";
+        ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+    </script>
+    <noscript><a href="https://www.livechat.com/chat-with/19365535/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
 </body>
 </html>
